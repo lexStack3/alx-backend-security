@@ -11,3 +11,11 @@ class RequestLog(models.Model):
         """String representation of a <RequestLog> instance."""
         return f"IP: {self.ip_address}"
 
+
+class BlockIP(models.Model):
+    """Model representation of a <BlockIP> instance."""
+    ip_address = models.GenericIPAddressField()
+
+    def __str__(self):
+        """String representation of a <BlockIP> instance"""
+        return f"Bocked IP: {self.ip_address}"
