@@ -35,7 +35,7 @@ class IPLoggingMiddleware:
         geo_data = cache.get(geo_cache_key)
 
         if geo_data is None:
-            geo_info = get_location(request)
+            geo_info = get_geolocation(request)
             geo_data = {
                 "country": geo_info.get("country"),
                 "city": geo_info.get("city")
